@@ -1,0 +1,243 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(250, 190, 220);
+    background-size: cover;
+    font-family: courier, serif;
+}
+nav{
+    background-color: rgb(249, 152, 201);
+   margin: 0;
+}
+nav ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav li{
+    height: 100px;
+}
+nav a{
+    height: 100%;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover {
+    background-color: rgb(254, 250, 113);
+}
+.headbar{
+    padding-right: auto;
+    padding-left: 50px;
+}
+.menu-button{
+    display: none;
+}
+.sidebar{
+position: fixed;
+top: 0;
+right: 0;
+height: 100vh;
+width: 250px;
+background-color: rgb(254, 250, 113, 0.7);
+backdrop-filter: blur(10px);
+z-index: 999;
+box-shadow: rgba(250, 190, 220, .7);
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar li a {
+    padding-left: 20px;
+}
+
+.logo-btn-image{
+    height: 75px; 
+    position: fixed;
+    margin: 0;
+    padding: 12px;
+    z-index: 998;
+}
+
+h2{
+    font-size: 6vw;
+    text-align: right;
+    padding-top: 3vw;
+}
+.gallery-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+.bio-pic {
+    display: block;
+    width: 20vw;
+    height: auto;
+    float: left;
+    padding: 10px;
+}
+.image-container {
+    column-count: 3;
+    column-gap: space-between;
+    width: 100%;
+}
+.image-card {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(255, 255, 255, 0.2);
+    width: 100%;
+    margin: 0 0 1rem;
+    break-inside: avoid;
+}
+.image-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: opacity(50%);
+    transition: filter 0.5s ease;
+}
+.image-card p {
+    display: block;
+   opacity: 0.5;
+   margin: 1rem;
+}
+.image-description {
+    display: none;
+}
+.image-card::after {
+    content: attr(data-description);
+    position: absolute;
+    top:15%;
+    left: 28%;
+    transform: translateX(-50%) translateY(.75rem);
+    background: none;
+    color: rgb(250, 190, 220);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 4vw; 
+    font-width: bold;
+    line-height: 1.2;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity .5s ease, transform 0.5s ease;
+    max-width: 50%;
+    text-align: left;
+    text-shadow: 2px 2px 0 rgb(182, 120, 120);
+}
+
+.image-card:hover img {
+    filter: opacity(100%);
+}
+
+.image-card:hover p {
+    opacity: 1;
+}
+
+.image-card:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.button-52 {
+    display: inline;
+    font-size: 2vw;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 1vw;
+    margin: 1vw;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(255, 255, 1, .1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-52:after {
+    justify-content: space-between;
+    content: "    ";
+    background-color: #ffed88;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 4px;
+    left: 4px;
+    transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.contact-info {
+    padding: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (max-width: 750px) {
+    .image-container {
+        column-count: 2;
+    }
+.image-card::after {
+    font-size: 6vw;
+}
+}
+
+@media (max-width: 400px) {
+    .image-container {
+        column-count: 1;
+    }
+    .image-card::after {
+    font-size: 8vw;
+    }
+}
+@media (max-width:1000px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button{
+        display: block;
+        padding-right: 5vw;
+    }
+    nav ul {
+    width: 90%;
+    display: flex;
+    justify-content: right;
+
+}
+}
