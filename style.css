@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -12,12 +13,13 @@ body{
     background-size: cover;
     font-family: courier, serif;
 }
+
 nav{
     background-color: rgb(249, 152, 201);
    margin: 0;
 }
 nav ul {
-    width: 90%;
+    width: 100%;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -212,9 +214,9 @@ h2{
     .image-container {
         column-count: 2;
     }
-.image-card::after {
+    .image-card::after {
     font-size: 6vw;
-}
+    }
 }
 
 @media (max-width: 400px) {
@@ -228,16 +230,15 @@ h2{
 @media (max-width:1000px) {
     .hideOnMobile {
         display: none;
-    }
+    }   
 
     .menu-button{
         display: block;
         padding-right: 5vw;
     }
     nav ul {
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: right;
-
-}
+    justify-content: flex-end;
+    }
 }
