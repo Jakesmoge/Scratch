@@ -84,6 +84,7 @@ h2{
     text-align: right;
     padding-top: 3vw;
     padding-right: 20px;
+    padding-bottom: 3vw;
 }
 
 .intro-component{
@@ -201,6 +202,7 @@ h2{
     margin: 1vw;
     outline: 0;
     border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
     position: relative;
     background-color: rgb(255, 255, 1, .1);
@@ -213,6 +215,7 @@ h2{
     justify-content: space-between;
     content: "    ";
     background-color: #ffed88;
+    border-radius: 5px;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -252,6 +255,13 @@ h2{
     .image-card::after {
     font-size: 8vw;
     }
+    .sidebar {
+        width: 100vw;
+    }
+    h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 }
 @media (max-width:800px) {
     .hideOnMobile {
