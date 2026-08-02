@@ -35,6 +35,7 @@ nav a{
     display: flex;
     align-items: center;
     color: black;
+    flex-grow: 1;
 }
 nav a:hover {
     background-color: rgb(254, 250, 113);
@@ -71,7 +72,7 @@ justify-content: flex-start;
 }
 
 .logo-btn-image{
-    height: 75px; 
+    height: 100px; 
     position: fixed;
     margin: 0;
     padding: 12px;
@@ -82,7 +83,22 @@ h2{
     font-size: 6vw;
     text-align: right;
     padding-top: 3vw;
+    padding-right: 20px;
 }
+
+.intro-component{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    z-index: 20;
+}
+.intro-component p{
+    padding-bottom: 15px;
+}
+
 .gallery-section{
     display: flex;
     align-items: center;
@@ -107,6 +123,16 @@ h2{
     column-count: 3;
     column-gap: space-between;
     width: 100%;
+}
+.text-card p {
+    padding: 25px;
+    justify-content: right;
+    text-align: center;
+}
+.text-card {
+    display: block;
+    margin: 0 0 1rem;
+    background-color: rgba(255, 255, 255, 0.167);
 }
 .image-card {
     position: relative;
@@ -227,7 +253,7 @@ h2{
     font-size: 8vw;
     }
 }
-@media (max-width:1000px) {
+@media (max-width:800px) {
     .hideOnMobile {
         display: none;
     }   
@@ -240,5 +266,10 @@ h2{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    }
+}
+@media (max-width: 700px) {
+    .intro {
+        gap: 1rem;
     }
 }
