@@ -23,7 +23,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
 }
 nav li{
     height: 100px;
@@ -53,7 +53,7 @@ top: 0;
 right: 0;
 height: 100vh;
 width: 250px;
-background-color: rgb(254, 250, 113, 0.7);
+background-color: rgb(254, 250, 113, 0.6);
 backdrop-filter: blur(10px);
 z-index: 999;
 box-shadow: rgba(250, 190, 220, .7);
@@ -78,13 +78,16 @@ justify-content: flex-start;
     padding: 12px;
     z-index: 998;
 }
-
+.section-header{
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    justify-content: right;
+}
 h2{
     font-size: 6vw;
     text-align: right;
-    padding-top: 3vw;
     padding-right: 20px;
-    padding-bottom: 3vw;
 }
 
 .intro-component{
@@ -94,7 +97,18 @@ h2{
     padding: 1rem;
     margin: 0.5rem 0;
     border-radius: 8px;
-    z-index: 20;
+}
+
+.bio-text{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+}
+.bio-text p{
+    padding-bottom: 15px;
 }
 .intro-component p{
     padding-bottom: 15px;
@@ -115,8 +129,7 @@ h2{
 }
 .bio-pic {
     display: block;
-    width: 20vw;
-    height: auto;
+    width: 250px;
     float: left;
     padding: 10px;
 }
@@ -132,7 +145,9 @@ h2{
 }
 .text-card {
     display: block;
-    margin: 0 0 1rem;
+    justify-self: center;
+    width: 90vw;
+    padding: auto;
     background-color: rgba(255, 255, 255, 0.167);
 }
 .image-card {
@@ -210,6 +225,10 @@ h2{
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+.button-52 a {
+    text-decoration: none;
+    color: black;
+}
 
 .button-52:after {
     justify-content: space-between;
@@ -229,7 +248,10 @@ h2{
   top: 0px;
   left: 0px;
 }
-
+.contact{
+    display: block;
+    height: 100vh;
+}
 .contact-info {
     padding: 20px;
     margin-bottom: 100px;
@@ -237,6 +259,9 @@ h2{
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+}
+.contact-info a{
+    padding: 20px;
 }
 
 @media (max-width: 750px) {
@@ -261,7 +286,20 @@ h2{
     h2{
     padding-top: 20px;
     padding-bottom: 20px;
-}
+    }
+    .contact-info {
+        padding: 20px;
+        margin: 0 0 150px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60vh;
+    }
+    .contact-info a {
+        padding: 50px;
+        font-size: 5vw;
+    }
 }
 @media (max-width:800px) {
     .hideOnMobile {
