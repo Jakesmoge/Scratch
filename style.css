@@ -38,7 +38,7 @@ nav a{
     flex-grow: 1;
 }
 nav a:hover {
-    background-color: rgb(254, 250, 113);
+    background-color: rgb(250, 190, 220);
 }
 .headbar{
     padding-right: auto;
@@ -143,6 +143,7 @@ h2{
     justify-content: right;
     text-align: center;
 }
+
 .text-card {
     display: block;
     justify-self: center;
@@ -150,6 +151,7 @@ h2{
     padding: auto;
     background-color: rgba(255, 255, 255, 0.167);
 }
+
 .image-card {
     position: relative;
     display: inline-block;
@@ -194,18 +196,56 @@ h2{
     text-align: left;
     text-shadow: 2px 2px 0 rgb(182, 120, 120);
 }
-
 .image-card:hover img {
     filter: opacity(100%);
 }
-
 .image-card:hover p {
     opacity: 1;
 }
-
 .image-card:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+.skill-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.skill-wrapper{
+    column-count: 2;
+    column-gap: space-between;
+    width: 100%;
+}
+.skill-card{
+    display: flex;
+    break-inside: avoid;
+    position: relative;
+    display: block;
+    background-color: rgba(249, 191, 246, 0.368);
+    width: 100%;
+    margin: 0 0 1rem;
+}
+.skill-card h3{
+    padding: 10px;
+    text-align: center;
+    background-color: #ffed88;
+}
+
+.skill-card p{
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.167);
+}
+
+.skill-card ul{
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.167);
+}
+.skill-card li{
+    margin-bottom: 1rem;
 }
 
 .button-52 {
@@ -273,7 +313,7 @@ h2{
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .image-container {
         column-count: 1;
     }
@@ -286,6 +326,9 @@ h2{
     h2{
     padding-top: 20px;
     padding-bottom: 20px;
+    }
+    .bio-pic{
+        width: 95vw;
     }
     .contact-info {
         padding: 20px;
@@ -301,7 +344,7 @@ h2{
         font-size: 5vw;
     }
 }
-@media (max-width:800px) {
+@media (max-width:450px) {
     .hideOnMobile {
         display: none;
     }   
@@ -314,6 +357,9 @@ h2{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    }
+    .skill-wrapper{
+        column-count: 1;
     }
 }
 @media (max-width: 700px) {
